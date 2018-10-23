@@ -28,7 +28,8 @@ c.addListener(`message${config.channels[0]}`, function (from, message) {
 
   [ ...urls ].map(url => {
     getTitle(url).then(title => {
-      c.say(config.channels[0], title.openGraph.title);
+
+      c.say(config.channels[0], title.general.title.replace(/^\s+|\s+$/g, ''));
     }
     );
 
