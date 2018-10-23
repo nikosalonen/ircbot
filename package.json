@@ -5,8 +5,14 @@
   "main": "index.js",
   "repository": "https://github.com/nikosalonen/ircbot.git",
   "author": "Niko Salonen <nikotsalonen@gmail.com>",
-  "license": "GPLv3",
+  "license": "MIT",
   "dependencies": {
-    "irc": "^0.5.2"
+    "ansi-color": "^0.2.1",
+    "cheerio": "^1.0.0-rc.2",
+    "encoding": "^0.1.12",
+    "html-metadata": "^1.7.0",
+    "irc": "^0.5.2",
+    "preq": "^0.5.6",
+    "url-regex": "^4.1.1"
   }
 }
