@@ -1,8 +1,7 @@
 const { getTitle } = require('./getTitle');
-
+const getUrls = require('get-urls');
 const config = require('./config');
 const irc = require('irc');
-const urlRegex = require('url-regex');
 const parseDublinCore = require('html-metadata').parseGeneral;
 exports.parseDublinCore = parseDublinCore;
 
@@ -24,14 +23,14 @@ c.addListener('error', function(message) {
   console.log(message);
 });
 
-c.addListener(`message${config.channels[0]}`, function(from, message) {
-  let url = message.match(urlRegex());
-  if (url) {
-    url.forEach(function(e) {
-      getTitle(e);
-    });
-  }
-  url = '';
+c.addListener(`message${config.channels[0]}`, function (from, message) {
+  let urls = getUrls(message);
+
+  [ ...urls ].map(url => {
+    getTitle(url).then(title => {
+      c.say(config.channels[0], title.openGraph.title);
+    }
+    );
+
+  });
 });
-
-
