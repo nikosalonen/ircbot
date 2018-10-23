@@ -1,0 +1,12 @@
+{
+  "name": "ircbot",
+  "version": "0.0.1",
+  "description": "node irc bot",
+  "main": "index.js",
+  "repository": "https://github.com/nikosalonen/ircbot.git",
+  "author": "Niko Salonen <nikotsalonen@gmail.com>",
+  "license": "GPLv3",
+  "dependencies": {
+    "irc": "^0.5.2"
+  }
+}
