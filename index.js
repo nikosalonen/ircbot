@@ -24,7 +24,7 @@ c.addListener('error', function(message) {
   console.log(message);
 });
 
-c.addListener(`message#${config.channels[0]}`, function(from, message) {
+c.addListener(`message${config.channels[0]}`, function(from, message) {
   let url = message.match(urlRegex());
   if (url) {
     url.forEach(function(e) {

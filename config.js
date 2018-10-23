@@ -1,7 +1,7 @@
 module.exports = {
   server: 'open.ircnet.net',
   nickname: 'varavibe',
-  channels: [ 'rölö' ],
+  channels: [ '#rölö' ],
   username: 'varavibe',
   realName: ';ASD;A;SD;A',
   autoRejoin: true,
