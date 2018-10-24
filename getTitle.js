@@ -16,7 +16,7 @@ function getTitle(url) {
       'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
     }
   };
-  let message =  scrape(options);
+  let message =  JSON.parse(JSON.stringify(scrape(options)));
   return message;
 }
 exports.getTitle = getTitle;
