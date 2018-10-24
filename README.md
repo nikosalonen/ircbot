@@ -10,4 +10,4 @@ Currently only checks every message for urls and then tries to get the page titl
 * `yarn`
 * `node index.js`
 
-Using tools like `forever` is recommended to keep the bot running headless.
+Using tools like [forever](https://www.npmjs.com/package/forever) is recommended to keep the bot running headless.
