@@ -20,6 +20,6 @@ async function getTitle(url) {
   };
   let message = await scrape(options);
 
-  return message;
+  return message.general.title.replace(/^\s+|\t|\n|\t|\s+$/g, '');
 }
 exports.getTitle = getTitle;
