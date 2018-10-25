@@ -7,16 +7,20 @@ const request = require('request');
  * @param {string} url - url from irc message
  * @returns {string} page metadata
  */
-function getTitle(url) {
+async function getTitle(url) {
 
   let options = {
     url: url,
     jar: request.jar(),
     headers: {
+      'Content-Type':'text/html; charset=utf-8',
+      'Accept-Language': 'en-US',
       'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
     }
   };
-  let message =  JSON.parse(JSON.stringify(scrape(options)));
-  return message;
+
+  let message =  await JSON.parse(JSON.stringify(scrape(options)));
+  return message.general.title.replace(/^\s+|\t|\n|\t|\s+$/g, '');
+
 }
 exports.getTitle = getTitle;
