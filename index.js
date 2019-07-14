@@ -19,7 +19,7 @@ const c = new irc.Client(config.server, config.nickname, {
 });
 exports.c = c;
 
-c.addListener('error', function(message) {
+c.addListener('error', function (message) {
   console.log(message);
 });
 
