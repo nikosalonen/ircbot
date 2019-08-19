@@ -13,7 +13,7 @@
     "get-urls": "^9.1.0",
     "html-metadata": "^1.7.0",
     "irc": "^0.5.2",
-    "preq": "^0.5.9"
+    "preq": "^0.5.11"
   },
   "devDependencies": {
     "eslint": "^6.0.1",
